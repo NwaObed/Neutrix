@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.data && locals.dataLen) { %>
+    <div class="cards">
+        <% for( let i = 1; i < 13; i++ ) { %>
+            <div class="card">
+                <h3><%= data[dataLen-1]["message"] %></h3>
+                <p>
+                    <%= data[dataLen-1]['fName'] %>
+                    <%= data[dataLen-1]["lName"] %>
+                </p>
+            </div>
+        <% } %>
+        
+    </div> 
+<% } else { %>
+        <div class="cards">
+            <% for( let i = 0; i < 12; i++ ) { %>
+                <div class="card">
+                    <h3>Neu blog post</h3>
+                    <p>by Author</p>
+                    <p>Time stamp</p>
+                    <span>Learn more ::after </span>
+                </div>
+            <% } %>
+        </div> 
+    <% } %>
+
+
+<!-- <script src="temp.js"></script> -->
+
+<%- include("partials/footer.ejs") %>

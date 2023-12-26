@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+
+<form action="/post.json" method="POST">
+    <input type="text" name="fName" placeholder="First name">
+    <input type="text" name="lName" placeholder="Last name">
+    <textarea id="w3review" name="message" rows="4" cols="50" placeholder="Make post here ..."></textarea>
+  <br>
+    <input type="submit" value="Make Post">
+</form>
+
+<%- include("partials/footer.ejs") %>
